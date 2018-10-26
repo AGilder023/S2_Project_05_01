@@ -6,8 +6,8 @@
    Case Problem 1
    
    Layout styles for Slate and Pencil Tutoring
-   Author: 
-   Date:   
+   Author: Adrian Gilder   
+   Date:   10/25/18
    
    Filename: sp_layout.css
 
@@ -20,18 +20,23 @@ html {
 
 body {
     width: 95%;
-    max-width: 960px;
     min-width: 640px;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
     min-height: 100%;
 }
 
-header ul nav li a {
+header,
+ul,
+nav,
+li,
+a {
     box-sizing: border-box;
 }
 
 /* Row Styles */
+/* This code controls the rows within the grid  */
 .row::after {
     clear: both;
     content: "";
@@ -41,36 +46,40 @@ header ul nav li a {
 
 
 
-
-
 /* Page Header Styles */
+/* The code here moves the padding and width of the header nav to fit the page  and move it left*/
 body>header>img {
     display: block;
     width: 70%;
     float: left;
 }
 
-body header nav {
+header>nav {
     float: left;
-    padding-right: 2%;
     padding-left: 2%;
+    padding-right: 2%;
     width: 30%;
 }
 
-header nav a {
+body>header>nav>ul>li {
     display: block;
     width: 100%;
+    margin-top: 5%;
 }
 
 /* Horizontal Navigation List Styles */
-.horizontal li {
+/* The nav here  allows the nav to be horizontal and below the header*/
+nav.horizontal ul li {
     display: block;
     width: 12.5%;
     float: left;
 }
 
+
+
 /* Topics Styles */
-ul#topics {
+/* The topics styles fits the pictures below the nav */
+ul#topics li {
     display: block;
     width: 20%;
     float: left;
@@ -78,12 +87,13 @@ ul#topics {
     margin-right: 1.5%;
 }
 
-ul#topics li:first-of-type {
+ul#topics:first-of-type {
     margin-left: 7.75%;
+
 }
 
-ul#topics li:last-of-type {
-    margin-left: 7.75%;
+ul#topics:last-of-type {
+    margin-right: 7.75%;
 }
 
 ul#topics li img {
@@ -94,17 +104,18 @@ ul#topics li img {
 }
 
 /* HR Styles */
+/* This shrinks the hr line down to 50% */
 hr {
     width: 50%;
 }
 
+
+
 /* Customer Comment Styles */
+/* The code here changes and fits the paragraphs and imgs above the footer and below the topics */
 ul#comments {
     width: 75%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 40px auto 40px auto;
 }
 
 ul#comments li {
@@ -128,7 +139,7 @@ ul#comments li p {
 }
 
 /* Footer Styles */
-
+/* This keeps the comments from fallinf below the footer */
 footer {
     clear: both;
 }
